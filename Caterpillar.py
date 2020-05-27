@@ -1,15 +1,15 @@
 import turtle as tr
 import random as rn
-import time as ti
+
 
 tr.bgcolor('yellow')
 caterpillar = tr.Turtle()
 caterpillar.speed(0)
-poly = ((0,0),(10,-5),(0,10),(-10,-5))
-tr.register_shape('arrow', poly)
-caterpillar.shape('arrow')
+#poly = ((0,0),(10,-5),(0,10),(-10,-5))  # if you want to change shape of caterpillar then remove comment
+#tr.register_shape('arrow', poly)        
+caterpillar.shape('square')              # and Replace square by arrow
 caterpillar.color('red')
-#caterpillar.penup()
+caterpillar.penup()
 caterpillar.hideturtle()
 
 leaf = tr.Turtle()
@@ -104,10 +104,6 @@ def move_right():
 def move_left():
     if caterpillar.heading() == 90 or caterpillar.heading() == 270:
         caterpillar.setheading(180)
-
-
-
-
 
 tr.onkey(start_game,'space')
 tr.onkey(move_up, 'Up')
